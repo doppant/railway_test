@@ -1,0 +1,14 @@
+buat motivasi mengikuti bootcamp sanbercode: laravel
+1. Mengikuti bootcamp Sanbercode untuk Laravel bisa menjadi langkah luar biasa dalam pengembangan karier dan keterampilan Anda. Berikut beberapa motivasi yang mungkin bisa membantu:
+
+2. Prospek Karier: Laravel adalah salah satu framework PHP paling populer. Menguasai Laravel bisa membuka banyak peluang kerja, karena banyak perusahaan mencari pengembang yang terampil dalam teknologi ini.
+
+3. Komunitas Besar: Laravel memiliki komunitas yang besar dan aktif. Anda bisa mendapatkan dukungan, berbagi pengetahuan, dan bahkan berkolaborasi dalam proyek open-source.
+
+4. Efisiensi Kerja: Laravel dirancang untuk memudahkan pengembangan aplikasi web dengan arsitektur MVC yang bersih. Menguasai Laravel akan membuat Anda lebih efisien dan produktif dalam pengembangan web.
+
+5. Pembelajaran Mendalam: Bootcamp Sanbercode menawarkan pembelajaran yang mendalam dan terstruktur. Anda akan mendapatkan pemahaman yang kuat tentang konsep-konsep dasar hingga fitur-fitur lanjutan di Laravel.
+
+6. Peningkatan Keahlian: Bootcamp ini tidak hanya mengajarkan Laravel, tetapi juga memberikan pengetahuan tentang praktik terbaik pengembangan perangkat lunak, yang akan sangat berharga dalam karier Anda.
+
+7. Proyek Nyata: Selama bootcamp, Anda akan bekerja pada proyek nyata yang dapat menambah portfolio Anda. Ini adalah kesempatan besar untuk menunjukkan keterampilan Anda kepada calon pemberi kerja.
