@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to SanberBook</title>
-</head>
-<body>
-    <header>
-        <h1>SanberBook</h1>
-    </header>
+@extends('layout.master')
+
+@section('judul')
+<header>
+    <h1>SanberBook</h1>
+</header>
+@endsection
+    
+@section('content')
     <main>
         <section>
             <h2>Social Media Developer Santai Berkualitas</h2>
@@ -33,5 +31,4 @@
             </ol>
         </section>
     </main>
-</body>
-</html>
+@endsection()

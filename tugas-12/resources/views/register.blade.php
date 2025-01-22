@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buat Account Baru!</title>
-</head>
-<body>
+@extends('layout.master')
+
+@section('judul')
+<h1>Buat Account Baru!</h1>
+
+@endsection
+
+@section('content')
     <div>
-        <h1>Buat Account Baru!</h1>
         <h4>Sign up Form</h6>
         <form action="{{ route('welcome') }}" method="POST">
             @csrf
@@ -45,5 +44,4 @@
             <input type="submit" value="Sign Up">
         </form>
     </div>
-</body>
-</html>
+@endsection()

@@ -20,3 +20,7 @@ Route::get('/', [DashboardController::class, 'index'])->name('home');
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register');
 
 Route::post('/welcome', [AuthController::class, 'showWelcome'])->name('welcome');
+
+Route::get('/master', function() {
+    return view('layout.master');
+});
