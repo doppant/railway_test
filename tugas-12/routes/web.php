@@ -24,3 +24,11 @@ Route::post('/welcome', [AuthController::class, 'showWelcome'])->name('welcome')
 Route::get('/master', function() {
     return view('layout.master');
 });
+
+Route::get('/table', function(){
+    return view('/partial.table');
+})->name('table');
+
+Route::get('/data-tables', function(){
+    return view('/partial.data-tables');
+})->name('data-tables');
