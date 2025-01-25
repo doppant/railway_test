@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CastController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,3 +33,5 @@ Route::get('/table', function(){
 Route::get('/data-tables', function(){
     return view('/partial.data-tables');
 })->name('data-tables');
+
+Route::resource('cast', CastController::class);
