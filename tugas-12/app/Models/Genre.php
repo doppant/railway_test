@@ -5,20 +5,18 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cast extends Model
+class Genre extends Model
 {
     use HasFactory;
 
-    protected $table = 'casts'; // Table name
+    protected $table = 'genres'; // Table name
 
     protected $fillable = [
         'name',
-        'age',
-        'bio',
     ];
 
-    public function actors()
+    public function films()
     {
-        return $this->hasMany(Actor::class, 'cast_id');
+        return $this->belongsToMany(Film::class, 'film_genre', 'genre_id', 'film_id');
     }
 }

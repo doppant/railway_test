@@ -5,7 +5,11 @@
           <img src="{{asset('/template/dist/img/user2-160x160.jpg')}}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Alexander Pierce</a>
+        @auth
+            <a href="#" class="d-block">{{ Auth::user()->name }}</a>
+          @else
+            <a href="#" class="d-block">Guest</a>
+          @endauth
         </div>
       </div>
 
@@ -28,16 +32,15 @@
                with font-awesome or any other icon font library -->
             <li class="nav-item">
                 <a href="{{route('home')}}" class="nav-link">
-                    <i class="nav-icon fas fa-th"></i>
+                    <i class="nav-icon fas fa-home"></i>
                     <p>
-                        Dashboard
-                        <span class="right badge badge-danger">New</span>
+                      Home
                     </p>
                 </a>
             </li>
           <li class="nav-item">
             <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+              <i class="nav-icon fas fa-columns"></i>
               <p>
                 Halaman
                 <i class="right fas fa-angle-left"></i>
@@ -59,29 +62,55 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
+            <a href="{{ route('cast.index') }}" class="nav-link">
+              <i class="nav-icon fas fa-theater-masks"></i>
               <p>
-                Cast
-                <i class="right fas fa-angle-left"></i>
+              Cast
               </p>
             </a>
-            <ul class="nav nav-treeview">
+            <!-- <ul class="nav nav-treeview">
               <li class="nav-item">
                 <a href="{{ route('cast.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Show Cast</p>
                 </a>
               </li>
-              <!-- <li class="nav-item">
-                <a href="{{route('data-tables')}}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Data Tables</p>
-                </a>
-              </li> -->
-            </ul>
+            </ul> -->
           </li>
-
+          <li class="nav-item">
+            <a href="{{route('films.index')}}" class="nav-link {{ Request::is('films*') ? 'active' : '' }}">
+                <i class="nav-icon fas fa-film"></i>
+                <p>Film</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('genres.index')}}" class="nav-link">
+                <i class="nav-icon fas fa-book"></i>
+                <p>
+                  Genre
+                </p>
+            </a>
+          </li>
+          <br>
+          @guest
+          <li class="nav-item" style="text-align: center;">
+            <a href="{{ route('login') }}" class="btn btn-primary btn-block">
+              Login
+            </a>
+          </li>
+          @endguest
+          @auth
+          <li class="nav-item" style="text-align: center;">
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+              @csrf
+            </form>
+            <a href="{{ route('logout') }}" class="btn btn-danger btn-block"
+               onclick="event.preventDefault();
+                        document.getElementById('logout-form').submit();">
+              Logout
+            </a>
+          </li>
+          @endauth
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

@@ -11,16 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('films_review', function (Blueprint $table) {
-            $table->id(); // Primary key id (bigint auto_increment)
-            $table->unsignedBigInteger('user_id'); // Foreign key
-            $table->unsignedBigInteger('film_id'); // Foreign key
-            $table->text('content');
-            $table->integer('point');
+        Schema::create('film_genre', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('film_id');
+            $table->unsignedBigInteger('genre_id');
             $table->timestamps();
 
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('film_id')->references('id')->on('films')->onDelete('cascade');
+            $table->foreign('genre_id')->references('id')->on('genres')->onDelete('cascade');
+            $table->unique(['film_id', 'genre_id']);  // To ensure a film doesn't repeat the same genre
         });
     }
 
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('films_review');
+        Schema::dropIfExists('film_genre');
     }
 };
